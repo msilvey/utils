@@ -50,7 +50,7 @@ def main():
 
     parser = ArgumentParser()
     parser.add_argument('-r', default='us-west-2', type=str, dest='aws_region', help='AWS Region to use')
-    parser.add_argument('-p', default='redroach', type=str, dest='aws_profile', help='AWS Profile to use')
+    parser.add_argument('-p', default='default', type=str, dest='aws_profile', help='AWS Profile to use')
     parser.add_argument('-i', default='10.*', type=str, dest='ip_address_glob', help='IP Address glob to filter on')
     args = parser.parse_args()
 
