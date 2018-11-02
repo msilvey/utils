@@ -6,6 +6,11 @@ from argparse import ArgumentParser
 import sys
 import logging
 
+logger = logging.getLogger(__name__)
+logger.addHandler(logging.StreamHandler())
+logger.setLevel(logging.ERROR)
+
+
 def setup_session(aws_profile, aws_region):
     try:
         sess = Session(region_name=aws_region, profile_name=aws_profile)
