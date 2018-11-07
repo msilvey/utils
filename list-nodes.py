@@ -49,9 +49,6 @@ def list_instances(aws_profile, region, ip_range_glob):
     return instance_list
 
 def main():
-    logger = logging.getLogger(__name__)
-    logger.addHandler(logging.StreamHandler())
-    logger.setLevel(logging.ERROR)
 
     parser = ArgumentParser()
     parser.add_argument('-r', default='us-west-2', type=str, dest='aws_region', help='AWS Region to use')
